@@ -22,37 +22,37 @@ export const NavSidebar = () => {
                 }}
                 items={[
                     {
-                        title: '👋 Hello there!',
-                        // itemId: '/about',
+                        title: 'Dev Tools',
+                        itemId: '/',
                         // you can use your own custom Icon component as well
                         // icon is optional
                         // elemBefore: () => <Icon name="inbox"/>,
                     },
-                    // {
-                    //     title: 'Management',
-                    //     itemId: '/management',
-                    //     // elemBefore: () => <Icon name="users"/>,
-                    //     subNav: [
-                    //         {
-                    //             title: 'Projects',
-                    //             itemId: '/management/projects',
-                    //         },
-                    //         {
-                    //             title: 'Members',
-                    //             itemId: '/management/members',
-                    //         },
-                    //     ],
-                    // },
-                    // {
-                    //     title: 'Another Item',
-                    //     itemId: '/another',
-                    //     subNav: [
-                    //         {
-                    //             title: 'Teams',
-                    //             itemId: '/management/teams',
-                    //         },
-                    //     ],
-                    // },
+                    {
+                        title: 'Management',
+                        itemId: '/management',
+                        // elemBefore: () => <Icon name="users"/>,
+                        subNav: [
+                            {
+                                title: 'Projects',
+                                itemId: '/management/projects',
+                            },
+                            {
+                                title: 'Members',
+                                itemId: '/management/members',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Another Item',
+                        itemId: '/another',
+                        subNav: [
+                            {
+                                title: 'Teams',
+                                itemId: '/management/teams',
+                            },
+                        ],
+                    },
                 ]}
             />
         </div>
