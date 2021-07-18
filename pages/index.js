@@ -10,7 +10,11 @@ import {DashboardLayout} from '../components/Layout';
 export default function Home() {
     return (
         <DashboardLayout>
-            <h2>Home Page</h2>
+            <div className={"text-center"}>
+                <h1 className={"p-5"}>Something Big is Coming!</h1>
+                <hr/>
+                In the meantime, you can find me <a href={"https://aviperl.me/"}>here</a>.
+            </div>
         </DashboardLayout>
     );
 }

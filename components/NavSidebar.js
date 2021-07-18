@@ -15,43 +15,44 @@ export const NavSidebar = () => {
         <div className={"navigation"}>
             <Navigation
                 // you can use your own router's api to get pathname
-                activeItemId="/management/members"
+                activeItemId="/"
                 onSelect={({itemId}) => {
                     // maybe push to the route
+                    console.log(itemId);
                 }}
                 items={[
                     {
-                        title: 'Dev Tools',
-                        itemId: '/about',
+                        title: '👋 Hello there!',
+                        // itemId: '/about',
                         // you can use your own custom Icon component as well
                         // icon is optional
                         // elemBefore: () => <Icon name="inbox"/>,
                     },
-                    {
-                        title: 'Management',
-                        itemId: '/management',
-                        // elemBefore: () => <Icon name="users"/>,
-                        subNav: [
-                            {
-                                title: 'Projects',
-                                itemId: '/management/projects',
-                            },
-                            {
-                                title: 'Members',
-                                itemId: '/management/members',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'Another Item',
-                        itemId: '/another',
-                        subNav: [
-                            {
-                                title: 'Teams',
-                                itemId: '/management/teams',
-                            },
-                        ],
-                    },
+                    // {
+                    //     title: 'Management',
+                    //     itemId: '/management',
+                    //     // elemBefore: () => <Icon name="users"/>,
+                    //     subNav: [
+                    //         {
+                    //             title: 'Projects',
+                    //             itemId: '/management/projects',
+                    //         },
+                    //         {
+                    //             title: 'Members',
+                    //             itemId: '/management/members',
+                    //         },
+                    //     ],
+                    // },
+                    // {
+                    //     title: 'Another Item',
+                    //     itemId: '/another',
+                    //     subNav: [
+                    //         {
+                    //             title: 'Teams',
+                    //             itemId: '/management/teams',
+                    //         },
+                    //     ],
+                    // },
                 ]}
             />
         </div>
