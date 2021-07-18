@@ -10,7 +10,7 @@ import {DashboardLayout} from '../components/Layout';
 export default function Home() {
     return (
         <DashboardLayout>
-            <h2>Home Page</h2>
+            <h1>About</h1>
         </DashboardLayout>
     );
 }
