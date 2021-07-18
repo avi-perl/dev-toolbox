@@ -1,0 +1,12 @@
+.Logo {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.LogoGrey {
+  color: var(--link-hover);
+}
+
+.LogoWords {
+  color: var(--secondary);
+}

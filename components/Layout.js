@@ -9,7 +9,7 @@ export const DashboardLayout = ({children}) => {
             <div className={"row m-0"}>
                 <div className={"col-auto p-0"}><NavSidebar/></div>
 
-                <div className={"col p-0"}>
+                <div className={"col pr-0 pl-0"}>
                     <div className={"page-content"}>{children}</div>
                 </div>
             </div>

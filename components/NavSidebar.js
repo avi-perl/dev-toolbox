@@ -4,52 +4,46 @@ import {Navigation} from "react-minimal-side-navigation";
 import {useRouter} from "next/router";
 // import Icon from "awesome-react-icons";
 import React, {useState} from "react";
+import { VscCode, VscInfo, VscWatch } from "react-icons/vsc";
+
+import Logo from "../components/Logo"
 
 
 export const NavSidebar = () => {
-    // const router = useRouter();
+    const router = useRouter();
     // const location = useLocation();
     // const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
     return (
         <div className={"navigation"}>
+            <div className={"navigation-title"}>
+                <Logo/>
+            </div>
             <Navigation
                 // you can use your own router's api to get pathname
                 activeItemId="/"
                 onSelect={({itemId}) => {
                     // maybe push to the route
-                    console.log(itemId);
+                    if (itemId) {
+                        router.push(itemId)
+                    }
                 }}
                 items={[
                     {
-                        title: 'Dev Tools',
+                        title: 'About',
                         itemId: '/',
                         // you can use your own custom Icon component as well
                         // icon is optional
-                        // elemBefore: () => <Icon name="inbox"/>,
+                        elemBefore: () => <VscInfo />,
                     },
                     {
-                        title: 'Management',
-                        itemId: '/management',
-                        // elemBefore: () => <Icon name="users"/>,
+                        title: 'Parser',
+                        itemId: null,
+                        elemBefore: () => <VscCode />,
                         subNav: [
                             {
-                                title: 'Projects',
-                                itemId: '/management/projects',
-                            },
-                            {
-                                title: 'Members',
-                                itemId: '/management/members',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'Another Item',
-                        itemId: '/another',
-                        subNav: [
-                            {
-                                title: 'Teams',
-                                itemId: '/management/teams',
+                                title: 'coming soon...',
+                                elemBefore: () => <VscWatch />,
                             },
                         ],
                     },
