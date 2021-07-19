@@ -6,7 +6,10 @@ import {useRouter} from "next/router";
 import React, {useState} from "react";
 import { VscCode, VscInfo, VscWatch } from "react-icons/vsc";
 
+import styles from "../styles/NavSidebar.module.css"
+
 import Logo from "../components/Logo"
+import AviLink from "./AviLink";
 
 
 export const NavSidebar = () => {
@@ -19,6 +22,7 @@ export const NavSidebar = () => {
             <div className={"navigation-title"}>
                 <Logo/>
             </div>
+            <hr className={styles.greyHr}/>
             <Navigation
                 // you can use your own router's api to get pathname
                 activeItemId="/"
@@ -49,6 +53,7 @@ export const NavSidebar = () => {
                     },
                 ]}
             />
+            <AviLink />
         </div>
     );
 };

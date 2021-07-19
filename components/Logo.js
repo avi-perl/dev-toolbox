@@ -6,9 +6,12 @@ const Logo = () => {
     return (
         <div className="d-none d-sm-block">
             <div className={styles.Logo}>
-                <span className={styles.LogoGrey}>&lt;</span>
-                <span className={styles.LogoWords}>tools</span>{" "}
-                <span className={styles.LogoGrey}>/&gt;</span>
+                <a href={"/"}>
+                    <span className={styles.LogoClass}>avi</span>
+                    <span className={styles.LogoGrey}>.</span>
+                    <span className={styles.LogoWords}>tools</span>
+                    <span className={styles.LogoGrey}>()</span>
+                </a>
             </div>
         </div>
     );

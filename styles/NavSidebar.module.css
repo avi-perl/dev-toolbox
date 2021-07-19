@@ -1,0 +1,4 @@
+.greyHr {
+  border-top: 2px solid var(--dark);
+  margin-left: 15px;
+}

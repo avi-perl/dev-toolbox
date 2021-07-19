@@ -3,6 +3,10 @@
   font-weight: 900;
 }
 
+.LogoBox {
+  background-color: var;
+}
+
 .LogoClass {
   color: var(--primary)
 }
@@ -13,4 +17,13 @@
 
 .LogoWords {
   color: var(--secondary);
+}
+
+.bottomdiv {
+  position:absolute;
+  left:0;
+  bottom:0;
+  padding: 25px;
+  color: var(--light-grey);
+  width: 100%;
 }
