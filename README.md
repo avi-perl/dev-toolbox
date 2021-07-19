@@ -1,3 +1,14 @@
+# avi.tools()
+
+### View Live:
+- Production: [tools.aviperl.me](https://tools.aviperl.me/)
+- Development: [dev.tools.aviperl.me](https://dev.tools.aviperl.me/)
+
+This project is a toolkit where I plan to host developer tools such as simple text manipulators, document validators, 
+and special projects such as the UI for my [document parsing API](https://github.com/avi-perl/Parsel-Selector-API). 
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
