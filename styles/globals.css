@@ -11,6 +11,8 @@
     --link: #a0a08c;
     --link-hover: #555555;
     --light-grey: #e6e6e6;
+    --md-grey: #7f7f7f;
+    --dk-grey: #3d3d3d;
 }
 
 body > div:first-child,
@@ -42,11 +44,12 @@ h1 {
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 20px;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
     line-height: 15.4px;
+    padding-top: 15px;
 }
 
 p {

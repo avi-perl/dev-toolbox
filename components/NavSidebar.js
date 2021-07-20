@@ -4,7 +4,7 @@ import {Navigation} from "react-minimal-side-navigation";
 import {useRouter} from "next/router";
 // import Icon from "awesome-react-icons";
 import React, {useState} from "react";
-import { VscCode, VscInfo, VscWatch } from "react-icons/vsc";
+import { VscCode, VscInfo, VscWatch, VscTextSize } from "react-icons/vsc";
 
 import styles from "../styles/NavSidebar.module.css"
 
@@ -39,6 +39,13 @@ export const NavSidebar = () => {
                         // you can use your own custom Icon component as well
                         // icon is optional
                         elemBefore: () => <VscInfo />,
+                    },
+                    {
+                        title: 'Text Manipulation',
+                        itemId: '/TextManipulation',
+                        // you can use your own custom Icon component as well
+                        // icon is optional
+                        elemBefore: () => <VscTextSize />,
                     },
                     {
                         title: 'Parser',

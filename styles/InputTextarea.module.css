@@ -1,0 +1,21 @@
+.inputBox {
+    color: var(--black);
+    width: 100%;
+    min-height: 100px;
+    border: 0.08rem solid #e2e2e2;
+    border-radius: 5px;
+    outline: none !important;
+    padding: 5px 10px;
+    font-size: small;
+    vertical-align: top;
+}
+
+.inputBox::-webkit-resizer {
+    /*display: none;*/
+    /*resize: horizontal;*/
+}
+
+.inputGutter {
+    padding-top: 5px;
+    display: flex;
+}

@@ -1,0 +1,25 @@
+.badge {
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.left {
+    display: inline-block;
+    color: white;
+    background-color: var(--dk-grey);
+    border-radius: 5px 0 0 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.right {
+    display: inline-block;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.primary {
+    background-color: var(--primary);
+}
