@@ -3,13 +3,13 @@ import {Navigation} from "react-minimal-side-navigation";
 // import {useHistory, useLocation} from "react-router-dom";
 import {useRouter} from "next/router";
 // import Icon from "awesome-react-icons";
-import React, {useState} from "react";
 import { VscCode, VscInfo, VscWatch, VscTextSize } from "react-icons/vsc";
 
 import styles from "../styles/NavSidebar.module.css"
 
 import Logo from "../components/Logo"
 import AviLink from "./AviLink";
+import {FaStarOfDavid} from "@react-icons/all-files/fa/FaStarOfDavid";
 
 
 export const NavSidebar = () => {
@@ -46,6 +46,13 @@ export const NavSidebar = () => {
                         // you can use your own custom Icon component as well
                         // icon is optional
                         elemBefore: () => <VscTextSize />,
+                    },
+                    {
+                        title: 'Hebrew',
+                        itemId: '/Hebrew',
+                        // you can use your own custom Icon component as well
+                        // icon is optional
+                        elemBefore: () => <FaStarOfDavid />,
                     },
                     {
                         title: 'Parser',
