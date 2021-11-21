@@ -8,7 +8,7 @@ class InputTextarea extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ''
+            value: (this.props.children ? this.props.children : '')
         }
         this.handleKeypress = this.handleKeypress.bind(this);
     }
@@ -45,8 +45,13 @@ class InputTextarea extends React.Component {
     render() {
         return (
             <>
-                <textarea className={styles.inputBox} readOnly={this.props.readOnly}
-                          onChange={(event) => this.handleKeypress(event)}/>
+                <textarea
+                    className={styles.inputBox}
+                    readOnly={this.props.readOnly}
+                    onChange={(event) => this.handleKeypress(event)}
+                    value={this.props.children}
+                    placeholder={this.props.placeholder}
+                />
                 {!this.props.noGutter ? (
                     <div className={styles.inputGutter}>
                         <Badge text={"Chars"} subtext={this.charCount()} color={"#4EC9B0FF"}/>
@@ -55,7 +60,6 @@ class InputTextarea extends React.Component {
                         <Badge text={"Lines"} subtext={this.lineCount()} color={"#8d3b70"}/>
                     </div>
                 ) : ('')}
-
             </>
         );
     }

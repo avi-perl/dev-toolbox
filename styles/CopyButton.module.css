@@ -1,0 +1,19 @@
+.copyButton {
+    margin-right: 5px;
+    font-size: 13px;
+    display: inline-block;
+    color: white;
+    background-color: var(--link);
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+.copyButton:hover {
+    background-color: var(--link-hover);
+}
+
+.copyButton:active {
+    background-color: var(--black);
+}

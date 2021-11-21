@@ -1,27 +1,48 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { withRouter } from "next/router"
 
 import {DashboardLayout} from "../components/Layout";
 import InputTextarea from "../components/InputTextarea"
+import ResultText from "../components/ResultText";
 
-export const Context = React.createContext();
 
-export default function TextManipulation() {
-    let state = {
-        text: ''
+class TextManipulation extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            text: ''
+        }
+        this.handleTextChange = this.handleTextChange.bind(this);
     }
-    function handleTextChange(value) {
-        state.text = value;
+
+    handleTextChange(value) {
+        this.setState({
+            text: value
+        });
     }
 
-    return (
-        <DashboardLayout>
-            <InputTextarea onTextChange={handleTextChange}/>
-            <br/>
-            More to come...
-            {/*<h3>All Caps</h3>*/}
-            {/*<InputTextarea readOnly={true} noGutter={true}/>*/}
-            {/*<h3>Reverse Case</h3>*/}
-            {/*<InputTextarea readOnly={true} noGutter={true}/>*/}
-        </DashboardLayout>
-    );
+    reverseText(text) {
+        let reversed_text = text
+        reversed_text = reversed_text
+                .split("\n")
+                .map((txt) => {
+                    return txt.split("").reverse().join("")
+                })
+                .join("\n")
+        return reversed_text
+    }
+
+    render() {
+        return (
+            <DashboardLayout>
+                <InputTextarea onTextChange={this.handleTextChange} placeholder={"Enter text to manipulate..."}/>
+                <br/>
+                <ResultText title={"Upper Case"}>{this.state.text.toUpperCase()}</ResultText>
+                <ResultText title={"Lower Case"}>{this.state.text.toLowerCase()}</ResultText>
+                <ResultText title={"Reverse Case"}>{this.reverseText(this.state.text)}</ResultText>
+            </DashboardLayout>
+        );
+    }
 }
+
+export default withRouter(TextManipulation);
